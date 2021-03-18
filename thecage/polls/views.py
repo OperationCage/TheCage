@@ -3,20 +3,20 @@ from django.http import HttpResponse
 # Create your views here.
 
 
-def crypids(request):
-    return render(request, './crypids.html')
+def cryptids(request):
+    return render(request, './cryptids.html')
 
 def location(request):
     return render(request, './location.html')
 
-def indicrypids(request):
-    return render(request, './indicrypids.html')
+def indicryptids(request):
+    return render(request, './indicryptids.html')
 
-def all_crypids_here(request):
-    return render(request, './all_crypids_here.html')
+def all_cryptids_here(request):
+    return render(request, './all_cryptids_here.html')
 
-def crypid_disc_date(request):
-    return render(request, './crypid_disc_date.html')
+def cryptid_disc_date(request):
+    return render(request, './cryptid_disc_date.html')
 
 
     
