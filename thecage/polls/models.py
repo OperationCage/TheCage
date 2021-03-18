@@ -26,6 +26,3 @@ class Description(models.Model):
 class DiscoveryDate(models.Model):
     name = models.ForeignKey(Name, on_delete=models.CASCADE)
     discoveryDate_text = models.DateTimeField("date discovered")
-
-    def __str__(self):
-        return self.discoveryDate_text
