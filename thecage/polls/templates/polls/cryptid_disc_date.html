@@ -1,16 +1,27 @@
 {% extends 'main.html' %}
 {% include './navbar.html' %}
 {% include './footer.html' %}
+{% load static %}  
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/cryptid_disc_date.css'%}">
+{% endblock %}
+
 {% block content %}
+
+<h1 class="ok">Hello crypid_disc_date</h1>
+<ul class="testList">
+    <li>ONE</li>
+    <li>TWO</li>
+
+</ul>
 <style>
     body{
-        background: url(../static/polls/bg3.jpg);
+        background: url(/polls/bg3.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         color:whitesmoke;
-}
-</style>
-<h1>Hello crypid_disc_date</h1>
-
+    }
+    </style>
 {% endblock %}
 

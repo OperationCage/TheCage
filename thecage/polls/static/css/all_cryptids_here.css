@@ -1,0 +1,16 @@
+h1, h2 {
+    color: white;
+}
+h1, h2{
+    text-align: center;
+}
+.cryptidList > li{
+    list-style-type: decimal;
+    font-size: 3vh;
+} 
+
+.allTest {
+    color: blue;
+
+}
+/* css linked all test code */

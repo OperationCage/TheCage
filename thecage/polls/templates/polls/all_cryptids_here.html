@@ -1,7 +1,11 @@
 {% extends 'main.html' %}
 {% include './navbar.html' %}
 {% include './footer.html' %}
+{% load static %} 
 
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/all_cryptids_here.css'%}">
+{% endblock %}
 {% block content %}
 
 <h1>The Cage List</h1>
@@ -20,14 +24,14 @@
         background-size: cover;
         color:whitesmoke;
     }
-    h1, h2{
+    /* h1, h2{
         text-align: center;
     }
     .cryptidList > li{
         list-style-type: decimal;
         font-size: 3vh;
-    } 
+    }  */
 </style>
-
+<h1 class="allTest">HELLO</h1>
 {% endblock %}
 

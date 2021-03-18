@@ -1,19 +1,14 @@
 {%extends 'main.html' %}
 {%include './navbar.html' %}
 {%include './footer.html' %}
+{% load static %}
 
-
-{% block content %}
-<style>
-    body{
-        background: url(../static/polls/bg4.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        color:whitesmoke;
-}
-</style>
-    <h1>{{ cryptid.name }}</h1>
-
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/indicryptids.css'%}">
 {% endblock %}
 
+{% block content %}
 
+<h1>{{ cryptid.name }}</h1>
+
+{% endblock %}

@@ -1,9 +1,22 @@
 {% extends 'main.html' %}
 {% include './navbar.html' %}
 {% include './footer.html' %}
+{% load static %} 
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/cryptids.css'%}">
+{% endblock %}
 
 {% block content %}
 
 <h1>The Cage Home Page</h1>
-
+<style>
+    body{
+        background: url(/polls/bg3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color:whitesmoke;
+    }
+    </style>
 {% endblock %}
+

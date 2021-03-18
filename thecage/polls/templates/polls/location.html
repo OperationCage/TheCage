@@ -1,21 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<header>    
 {% extends 'main.html' %}
-{% load static %}
 {% include './navbar.html' %}
 {% include './footer.html' %}
+{% load static %}
 
-<link rel="stylesheet" href="{% static 'polls/location.css' %}">
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/location.css' %}">
+{% endblock %}
 
-</header>
 
-<body></body>
 {% block content %}
 
-<h1>locations page</h1>
+<h1 class="locText">locations page</h1>
 
 {% endblock %}
 
     
-</html>
