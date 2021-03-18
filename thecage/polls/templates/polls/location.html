@@ -1,18 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>    
 {% extends 'main.html' %}
+{% load static %}
 {% include './navbar.html' %}
 {% include './footer.html' %}
 
+<link rel="stylesheet" href="{% static 'polls/location.css' %}">
+
+</header>
+
+<body></body>
 {% block content %}
-<style>
-    body{
-        background: url(../static/polls/bg2.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        color:whitesmoke;
-}
-</style>
+
 <h1>locations page</h1>
 
 {% endblock %}
 
     
+</html>
