@@ -4,23 +4,19 @@
 
 {% block content %}
 
-<h1>Crypids</h1>
+<h1>The Cage List</h1>
+<h2>List of the Discovered Cryptids!</h2>
+
 <ul>
-    <li>
-        ONE
-    </li>
-    <li>
-        TWO
-    </li>
-    <li>
-       THREE 
-    </li>
-    <li>
-        FOUR
-    </li>
-    <li>
-        FIVE
-    </li>
+    {% for cryptids in name %}
+        <li>{{ cryptids.name_text }}</li>
+    {% endfor %}
 </ul>
+
+<style>
+    li{
+        list-style-type: decimal;
+    }
+</style>
 
 {% endblock %}
