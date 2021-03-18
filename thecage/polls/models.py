@@ -2,27 +2,17 @@ import datetime
 from django.db import models
 from django.utils import timezone
 
-class Name(models.Model):
-    name_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField("date published")
+class Cryptid(models.Model):
+    name = models.CharField(max_length=200)
+    description = models.TextField()
+    discovered_date = models.DateTimeField("date discovered")
 
     def __str__(self):
-        return self.name_text
+        return self.name
 
 class Location(models.Model):
-    name = models.ForeignKey(Name, on_delete=models.CASCADE)
-    location_text = models.CharField(max_length=200)
+    name = models.CharField(max_length=255)
+    cryptids = models.ManyToManyField(Cryptid, related_name="locations")
 
     def __str__(self):
-        return self.location_text
-
-class Description(models.Model):
-    name = models.ForeignKey(Name, on_delete=models.CASCADE)
-    description_text = models.CharField(max_length=400)
-
-    def __str__(self):
-        return self.description_text
-
-class DiscoveryDate(models.Model):
-    name = models.ForeignKey(Name, on_delete=models.CASCADE)
-    discoveryDate_text = models.DateTimeField("date discovered")
+        return self.name

@@ -8,8 +8,8 @@
 <h2>List of the Discovered Cryptids!</h2>
 
 <ul class="cryptidList">
-    {% for cryptids in name %}
-        <li>{{ cryptids.name_text }}</li>
+    {% for cryptid in cryptids %}
+        <li><a href="{% url 'cryptid' cryptid.id %}">{{ cryptid.name }}</a></li>
     {% endfor %}
 </ul>
 
@@ -19,7 +19,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         color:whitesmoke;
-  }
+    }
     h1, h2{
         text-align: center;
     }
