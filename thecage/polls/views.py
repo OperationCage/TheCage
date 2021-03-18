@@ -18,5 +18,8 @@ def all_cryptids_here(request):
 def cryptid_disc_date(request):
     return render(request, './cryptid_disc_date.html')
 
+def home(request):
+    return render(request, './main.html')
+
 
     
