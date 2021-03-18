@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+{% include './navbar.html' %}
+{% include './footer.html' %}
+
+{% block content %}
+
+<h1>The Cage List</h1>
+<h2>List of the Discovered Cryptids!</h2>
+
+<ul>
+    {% for cryptids in name %}
+        <li>{{ cryptids.name_text }}</li>
+    {% endfor %}
+</ul>
+
+<style>
+    li{
+        list-style-type: decimal;
+    }
+</style>
+
+{% endblock %}
