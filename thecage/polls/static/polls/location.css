@@ -1,0 +1,7 @@
+body 
+    {
+        background: url(../static/polls/bg2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color:whitesmoke;
+    }
