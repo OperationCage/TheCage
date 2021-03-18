@@ -18,7 +18,5 @@ def all_crypids_here(request):
 def crypid_disc_date(request):
     return render(request, './crypid_disc_date.html')
 
-def crypid_disc_date(request):
-    return render(request, './location')
 
     
