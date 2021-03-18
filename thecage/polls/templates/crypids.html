@@ -1,23 +1,34 @@
 {%extends './main.html' %}
 {%include './navbar.html' %}
 {%include './footer.html' %}
+{% load static %}
 
 {% block content %}
 
-<h1>Crypids</h1>
+<style>
+    img {
+        max-width: 300px;
+        max-height: 400px;
+    }
+</style>
+<h1>Cryptids</h1>
 <ul>
     <li>
-        ONE
+        Nuckelavee
     </li>
+    <img src="{% static 'polls/Nuckelavee.jpg' %}">
     <li>
-        TWO
+        Barghest
     </li>
+    <img src="{% static 'polls/Barghest.jpg' %}">
     <li>
-       THREE 
+       Red Cap 
     </li>
+    <img src="{% static 'polls/Red_Cap.jpg' %}">
     <li>
-        FOUR
+        Kelpie
     </li>
+    <img src="{% static 'polls/Kelpie.jpg' %}">
     <li>
         FIVE
     </li>
