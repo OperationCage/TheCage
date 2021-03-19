@@ -7,17 +7,17 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="{% url 'cryptids' %}">Cryptids</a>
+          <a class="nav-link" href="{% url 'home' %}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'location' %}">Location</a>
+          <a class="nav-link" href="{% url 'cryptids' %}">Cryptid List</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'cryptid_disc_date' %}">Crypid_disc_date</a>
+          <a class="nav-link" href="{% url 'locations' %}">Locations</a>
         </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'all_cryptids_here' %}">All_cryptids_here</a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'cryptid_disc_date' %}">Discovery Date</a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
            Contributers
@@ -34,3 +34,14 @@
       </ul>
     </div>
   </nav>
+
+  <style>
+    .navbar-nav a{
+      font-weight: 600;
+    }
+    .navbar-nav a:hover{
+      color: white;
+      background-color: rgb(52, 58, 64);
+      transition-duration: 0.5s;
+    }
+  </style>
