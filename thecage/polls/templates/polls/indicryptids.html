@@ -7,12 +7,12 @@
 <div class="cryptidWrapper">
     <div class="name-header">
         <h1>{{ cryptid.name }}</h1>
-        <br>
-        <img src="{{ cryptid.photo.url }}"/>
         <h3>Discovered: {{ cryptid.discovered_date }}</h3>
+        <img src="{{ cryptid.photo.url }}" height="400" width="600"/>
+       
     </div>
     <div class="individual-content">
-        
+        <br>
         <p>{{ cryptid.description }}</p>
     </div>
 </div>
@@ -21,7 +21,7 @@
 
 <style>
     body{
-        background: url(../static/polls/bg4.jpg);
+        background: url(/static/polls/bg2.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-color: rgb(52, 58, 64);
@@ -29,11 +29,12 @@
     }
     .cryptidWrapper{
         width: 90%;
-        padding-left: 20%; 
+        padding-left: 33%; 
     }
-    img{
-        max-width: 600px;
-        max-height: 800px;
+    .individual-content {
+        width: 600px;
+        color: white;
+        background-color: darkslategrey;
     }
 </style>
 
