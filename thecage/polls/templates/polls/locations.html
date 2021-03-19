@@ -14,8 +14,11 @@
 {% block content %}
 
 <h1>locations page</h1>
-{{location.name}}
+<ul>{% for location in locations %}
+    <li><a href="{% url 'location' location.id %}"> {{location.name}}</a></li>  
 
+{% endfor %}
+</ul>
 {% endblock %}
 
     

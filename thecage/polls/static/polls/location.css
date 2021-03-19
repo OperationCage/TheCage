@@ -4,7 +4,7 @@ h1 {
 
 
 body {
-    background: url(../static/polls/bg2.jpg);
+    background: url(/static/polls/bg2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color:whitesmoke;
