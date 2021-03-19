@@ -26,4 +26,5 @@ def all_cryptids_here(request):
     return render(request, 'polls/all_cryptids_here.html', data)
 
 def cryptid_disc_date(request):
-    return render(request, 'polls/cryptid_disc_date.html')
+    data={"cryptid_disc_date": Cryptid.objects.all()}
+    return render(request, 'polls/cryptid_disc_date.html', data)
