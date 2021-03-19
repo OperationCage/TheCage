@@ -7,11 +7,14 @@
 <h1>The Cage List</h1>
 <h2>List of the Discovered Cryptids!</h2>
 
-<ul class="cryptidList">
-    {% for cryptid in cryptids %}
-        <li><a href="{% url 'cryptid' cryptid.id %}">{{ cryptid.name }}</a></li>
-    {% endfor %}
-</ul>
+<div class="listingContent">
+    <ul class="cryptidList">
+        {% for cryptid in cryptids %}
+            <li><a href="{% url 'cryptid' cryptid.id %}">{{ cryptid.name }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
 
 <style>
     body{
@@ -23,10 +26,28 @@
     h1, h2{
         text-align: center;
     }
+    .listingContent{
+        justify-content: center;
+    }
+    .cryptidList{
+        padding-top: 5%;
+        display: grid;
+        justify-content: center;
+        grid-gap: 5%;
+        grid-template-columns: repeat(2, 40%);
+    }
     .cryptidList > li{
-        list-style-type: decimal;
+        text-align: center;
+        list-style-type: none;
         font-size: 3vh;
+        background-color: rgb(52, 58, 64);
+        border-radius: 5px;
+        padding: 5%;
     } 
+    .cryptidList a{
+        color: white;
+        text-align: center;
+    }
 </style>
 
 {% endblock %}
