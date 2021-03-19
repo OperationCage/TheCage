@@ -15,7 +15,9 @@
 
 <h1>Confirmed Sightings </h1>
 <div class="locBox">
-{{location.name}}
+    {% for cryptid in location.cryptids.all %}
+    {{cryptid}}
+    {% endfor %}
 </div>
 <img class="locImages"src="{{ location.photo.url }}" height="400" width="600"/>
 
