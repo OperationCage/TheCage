@@ -2,7 +2,6 @@
 {%include './navbar.html' %}
 {%include './footer.html' %}
 
-
 {% block content %}
 <style>
     body{
@@ -13,6 +12,7 @@
 }
 </style>
     <h1>{{ cryptid.name }}</h1>
+    <img src="{{ cryptid.photo.url }}"/>
 
 {% endblock %}
 
