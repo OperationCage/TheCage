@@ -1,23 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<header>    
 {% extends 'main.html' %}
 {% load static %}
 {% include './navbar.html' %}
 {% include './footer.html' %}
 
-<link rel="stylesheet" href="{% static 'polls/location.css' %}">
-
-</header>
-
-<body></body>
 {% block content %}
+<style>
+    body {
+        background-image:url('/static/polls/bg2.jpg');
+    }
+    .cryptidList > li {
+    text-align: center;
+    list-style-type: none;
+    font-size: 4vh;
+    color:whitesmoke;
+    }
+    .cryptidList li:hover img{
+    opacity: 0.5;
+    transition-duration: 0.5s;
+  }
+  .cryptidList li:hover a {
+      z-index: 1;
+      display: block;
+      transition-duration: 0.3s;
+  }
+    h1 {
+        text-align: center;
+        text-shadow: -1px -1px 0 whitesmoke, 1px -1px 0 whitesmoke, -1px 1px 0 whitesmoke, 1px 1px 0 whitesmoke;
+    }
+</style>
 
 <h1>Confirmed Sightings </h1>
 <div class="locBox">
+    <ul class="cryptidList">
     {% for cryptid in location.cryptids.all %}
+    <li>
     {{cryptid}}
+    </li>
     {% endfor %}
+    </ul>
 </div>
 <img class="locImages"src="{{ location.photo.url }}" height="400" width="600"/>
 
