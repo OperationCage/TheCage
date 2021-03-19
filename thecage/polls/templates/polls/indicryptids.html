@@ -7,6 +7,7 @@
 <div class="cryptidWrapper">
     <div class="name-header">
         <h1>{{ cryptid.name }}</h1>
+        <br>
         <img src="{{ cryptid.photo.url }}"/>
         <h3>Discovered: {{ cryptid.discovered_date }}</h3>
     </div>
@@ -29,6 +30,10 @@
     .cryptidWrapper{
         width: 90%;
         padding-left: 20%; 
+    }
+    img{
+        max-width: 600px;
+        max-height: 800px;
     }
 </style>
 
