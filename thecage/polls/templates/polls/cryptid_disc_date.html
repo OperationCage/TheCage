@@ -1,16 +1,59 @@
 {% extends 'main.html' %}
 {% include './navbar.html' %}
 {% include './footer.html' %}
+
 {% block content %}
+
+<div class="discDateWrapper">
+    <h1>Discovery Dates of Our Cryptids!</h1>
+
+    <div class="discDateContent">
+        <ul class="cryptidList">
+            {% for cryptid in cryptid_disc_date %}
+                <li>
+                    <h2>{{ cryptid.name }}</h2>
+                    <p>Discovered Date: {{ cryptid.discovered_date }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
 <style>
-    body{
+    body {
         background: url(../static/polls/bg3.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        color:whitesmoke;
-}
+        color: whitesmoke;
+    }
+    h1 {
+        text-align: center;
+        text-shadow: -1px -1px 0 whitesmoke, 1px -1px 0 whitesmoke, -1px 1px 0 whitesmoke, 1px 1px 0 whitesmoke;
+    }
+    .discDateContent{
+        display: flex;
+        justify-content: center;
+    }
+    .cryptidList{
+        padding-top: 2.5%;
+        width: 35%;
+        list-style-type: none;
+    }
+    .cryptidList li:hover{
+        background-color: rgb(52, 58, 64);
+        transition: 0.5s;
+        border-radius: 5%;
+    }
+    .cryptidList li h2{
+        padding-left: 5%;
+        padding-top: 5%;
+    }
+    .cryptidList li p{
+        font-weight: 600;
+        font-size: 2vh;
+        padding-bottom: 5%;
+        padding-left: 5%;
+    }
 </style>
-<h1>Hello crypid_disc_date</h1>
 
 {% endblock %}
-
