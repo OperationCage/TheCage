@@ -16,26 +16,14 @@
 </div>
 
 <style>
+
   body {
     background: url(../static/polls/bg1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color: whitesmoke;
   }
-  h1,
-  h2 {
-    text-align: center;
-  }
-  .listingContent {
-    justify-content: center;
-  }
-  .cryptidList {
-    padding-top: 5%;
-    display: grid;
-    justify-content: center;
-    grid-gap: 5%;
-    grid-template-columns: repeat(2, 40%);
-  }
+
   .cryptidList > li {
     text-align: center;
     list-style-type: none;
@@ -64,6 +52,25 @@
       display: block;
       transition-duration: 0.3s;
   }
+
+    h1 {
+        text-align: center;
+        text-shadow: -1px -1px 0 whitesmoke, 1px -1px 0 whitesmoke, -1px 1px 0 whitesmoke, 1px 1px 0 whitesmoke;
+    }
+    h2{
+        text-align: center;
+    }
+    .listingContent{
+        justify-content: center;
+    }
+    .cryptidList{
+        padding-top: 5%;
+        display: grid;
+        justify-content: center;
+        grid-gap: 5%;
+        grid-template-columns: repeat(2, 40%);
+    }
+
 </style>
 
 {% endblock %}

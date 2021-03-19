@@ -13,8 +13,30 @@
 <body></body>
 {% block content %}
 
-<h1>locations page</h1>
+<h1>Confirmed Sightings </h1>
+<div class="locBox">
 {{location.name}}
+</div>
+<img class="locImages"src="{{ location.photo.url }}" height="400" width="600"/>
+
+
+
+<style>
+.locImages {
+   margin-left: 30%;
+}
+h1 {
+    text-align: center;
+    font-family: fantasy;
+}
+.locBox {
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+
+}
+</style>
+
 
 {% endblock %}
 
