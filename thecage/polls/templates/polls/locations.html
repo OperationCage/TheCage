@@ -13,12 +13,48 @@
 <body></body>
 {% block content %}
 
-<h1>locations page</h1>
-<ul>{% for location in locations %}
-    <li><a href="{% url 'location' location.id %}"> {{location.name}}</a></li>  
+<div>
+<h1>Cryptid Sightings</h1>
+</div>
 
-{% endfor %}
+<div class="listingContent">
+    <ul class="locationList">
+        {% for location in locations %}
+            <li><a href="{% url 'location' location.id %}"> {{location.name}}</a></li>  
+        {% endfor %}
 </ul>
+</div>
+
+
+<style>
+    h1 {
+        text-align: center;
+        text-shadow: -1px -1px 0 whitesmoke, 1px -1px 0 whitesmoke, -1px 1px 0 whitesmoke, 1px 1px 0 whitesmoke;
+    }
+    .listingContent{
+        justify-content: center;
+    }
+    .locationList{
+        padding-top: 5%;
+        display: grid;
+        justify-content: center;
+        grid-gap: 5%;
+        grid-template-columns: repeat(2, 40%);
+    }
+    .locationList > li{
+        text-align: center;
+        list-style-type: none;
+        font-size: 3vh;
+        background-color: rgb(52, 58, 64);
+        border-radius: 5px;
+        padding: 5%;
+    } 
+    .locationList a{
+        color: white;
+        text-align: center;
+    }
+</style>
+
 {% endblock %}
 
     
